@@ -4,8 +4,8 @@ const app = express();
 const http = require("http");
 
 // 1 -> Kirish code
-app.use(express.static("public"));
-app.use(express.json());
+app.use(express.static("public")); 
+app.use(express.json()); // expressdan kelayotgan objectni jsonga o'tkazib oldik
 app.use(express.urlencoded({ extended: true }));
 
 // 2 -> Sessiom
