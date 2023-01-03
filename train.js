@@ -29,6 +29,6 @@ function calculator(number1, symbol, number2) {
   }
 }
 
-(calculator(8, "+", 2)); //10
-(calculator("*", 2)); // not valid to operate
-(calculator(4, "/", 0)); // not valid to operate
+calculator(8, "+", 2); //10
+calculator("*", 2); // not valid to operate
+calculator(4, "/", 0); // not valid to operate
