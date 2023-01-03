@@ -5,7 +5,7 @@ ravishda number, string, number qabul qilsin va javob return qilsin.
 
  📌  Masalan: calculator(8, "+", 2) return 10, calculator(4, "*", 2) return 8, 
 calculator(4, "/", 2) return 2. Qoshimcha shart agar sonlar kiritilmasa yoki mahraj
- 0 kiritilsa 'not valid to operate' stringni return qilsin */
+ 0 kiritilsa 'not valid to operate' stringni return qilsin. */
 
 function calculator(number1, symbol, number2) {
   if (
