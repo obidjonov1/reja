@@ -159,7 +159,20 @@ maslahatBer(20, (err, data) => {
   }
 });
 console.log("passed here 1"); */
+/* function numberTop(num, callback) {
+  if (typeof num !== "number") callback("sonni kiriting", null);
+  else if (num > 100) callback(null, "bu son yuzdan katta");
+  else {
+    callback(null, "bu son yuzdan kichik");
+  }
+}
 
+numberTop(99, (err, data) => {
+  if (err) console.log("ERROR:", err);
+  else {
+    console.log("javob:", data);
+  }
+}); */
 /*
 
 
