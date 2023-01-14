@@ -10,7 +10,6 @@ console.log(reverseString("javascript")); // tpircsavaj
 
 
 
-
 */
 //                   ======================= F-Task =======================
 /* Shunday function tuzingki unga integerlardan iborat array pass bolsin va function 
