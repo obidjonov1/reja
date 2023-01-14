@@ -1,3 +1,17 @@
+//              ========================== H-Task =======================
+/*   H-Task: Kiritilgan stringni teskari qilib chiqaradigan function tuzing, 
+      masalan: reverseString("javascript") return qilishi kerak "tpircsavaj". */
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverseString("javascript")); // tpircsavaj
+/* 
+
+
+
+
+
+*/
 //                   ======================= F-Task =======================
 /* Shunday function tuzingki unga integerlardan iborat array pass bolsin va function 
 bizga osha arrayning eng katta qiymatiga tegishli birinchi indexsini qaytarsin.

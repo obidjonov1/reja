@@ -26,14 +26,35 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 
   axios
     .post("/create-item", { reja: createField.value })
-    .then((response) => {
+    .then((respose) => {
       document
         .getElementById("item-list")
-        .insertAdjacentHTML("beforeend", itemTemplete(response.data));
+        .insertAdjacentHTML("beforeend", itemTemplete(respose.data));
       createField.value = "";
       createField.focus();
     })
     .cach((err) => {
       console.log("Iltimos qaytadan harkat qiling!");
     });
+});
+
+document.addEventListener("click", function (e) {
+  // Delete operation
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Aniq o'chirmoqchimsiz ?")) {
+      axios
+        .post("/delete-item", { id: e.target.getAttribute("data-id") })
+        .then((respose) => {
+          console.log(respose.data);
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("Iltimos qaytadan harkat qiling!");
+        });
+    }
+  }
+  // Edit operation
+  if (e.target.classList.contains("edit-me")) {
+    alert("Siz edit tugmasini bosdingiz!");
+  }
 });
