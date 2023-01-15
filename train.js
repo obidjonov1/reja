@@ -1,4 +1,4 @@
-//              ========================== I-Task =======================
+//             ========================== I-Task =======================
 /*      Shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib,  
       faqat positive yani noldan yuqori qiymatlarni arrayda return qilsin
 
