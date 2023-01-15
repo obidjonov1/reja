@@ -1,10 +1,28 @@
-//              ========================== H-Task =======================
+//              ========================== I-Task =======================
+/*      Shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib,  
+      faqat positive yani noldan yuqori qiymatlarni arrayda return qilsin
+
+    📌  Masalan: getPositive([0, -15, 5, -3, 2, -8, 9, -11]) return qilishi kerak [5, 2, 9] */
+
+function getPositive(numbers) {
+  return numbers.filter(function (number) {
+    return number > 0;
+  });
+}
+console.log(getPositive([0, -15, 5, -3, 2, -8, 9, -11]));  //[5, 2, 9]
+/* 
+
+
+
+
+
+*/ //              ========================== H-Task =======================
 /*   H-Task: Kiritilgan stringni teskari qilib chiqaradigan function tuzing, 
       masalan: reverseString("javascript") return qilishi kerak "tpircsavaj". */
-function reverseString(str) {
+/* function reverseString(str) {
   return str.split("").reverse().join("");
 }
-console.log(reverseString("javascript")); // tpircsavaj
+console.log(reverseString("javascript")); // tpircsavaj */
 /* 
 
 
@@ -18,7 +36,7 @@ bizga osha arrayning eng katta qiymatiga tegishli birinchi indexsini qaytarsin.
 📌  Masalan: findBig([4, 5, 9, 12,  3]) return qilishi kerak 3ni, 
     yoki findBig([0, 100, 5]) return 1 */
 
-function findBig(arr) {
+/* function findBig(arr) {
   let max = arr[0];
   let index = 0;
   for (i = 0; i < arr.length; i++) {
@@ -32,7 +50,7 @@ function findBig(arr) {
 }
 
 console.log(findBig([4, 5, 9, 12, 3])); // 3
-console.log(findBig([0, 100, 5])); // 1
+console.log(findBig([0, 100, 5])); // 1 */
 
 /* 
 
@@ -56,7 +74,7 @@ console.log(findBig([0, 100, 5])); // 1
  */
 
 // console.log("Jack Ma maslahatari");
-const list = [
+/* const list = [
   "yaxshi talaba bo'ling", // 0-20
   "to'gri boshliq tanlang va koproq xato qiling", // 20-30
   "ozingizga ishlashni boshlang", // 30-40
@@ -75,16 +93,17 @@ async function maslahatBer(a) {
   else {
     // return list[5];
     // setTimeout(function () {   /* async functionda defination qismida setTimelarni ishlatib bo'lmaydi */
-    //   callback(null, list[5]);
-    // }, 5000);
-    // ===== setTIme bilan ishlash uchun "promise"dan foydalanamiz
+//   callback(null, list[5]);
+// }, 5000);
+// ===== setTIme bilan ishlash uchun "promise"dan foydalanamiz
+/*
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(list[5]);
       }, 5000);
     });
   }
-}
+} */
 // ============= then, catch orqali
 // maslahatBer(25)
 //   .then((data) => {

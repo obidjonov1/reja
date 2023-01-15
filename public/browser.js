@@ -1,3 +1,4 @@
+// const { response } = require("../app");
 console.log("Frontend JS ishga tushdi");
 
 function itemTemplete(item) {
@@ -8,12 +9,12 @@ function itemTemplete(item) {
             <button
               data-id="${item._id}"
               class="edit-me btn btn-secondary btn-sm mr-1">
-              O'zgartirish
+              Edit
             </button>
             <button
               data-id="${item._id}"
               class="delete-me btn btn-danger btn-sm">
-              O'chirish
+              Delete
             </button>
           </div>
         </li>`;
@@ -22,7 +23,7 @@ function itemTemplete(item) {
 let createField = document.getElementById("create-field");
 
 document.getElementById("create-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+  e.preventDefault(); // "/create-item" ga o'tib ketmaslii uchun
 
   axios
     .post("/create-item", { reja: createField.value })
@@ -33,7 +34,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
       createField.value = "";
       createField.focus();
     })
-    .cach((err) => {
+    .catch((err) => {
       console.log("Iltimos qaytadan harkat qiling!");
     });
 });
@@ -53,8 +54,38 @@ document.addEventListener("click", function (e) {
         });
     }
   }
+
   // Edit operation
   if (e.target.classList.contains("edit-me")) {
-    alert("Siz edit tugmasini bosdingiz!");
+    let userInput = prompt(
+      "O'zgartirish kiriting",
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+    if (userInput) {
+      // edit bo'lganni databasega yuborish
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          console.log(response.data);
+          // ejsni ham edit qilish kerak
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Iltimos qaytadan harkat qiling!");
+        });
+    }
   }
+});
+
+// Delete all operation
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios.post("/delete-all", { delete_all: true }).then((respose) => {
+    alert(respose.data.state);
+    document.location.reload();
+  });
 });

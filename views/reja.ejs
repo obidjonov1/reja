@@ -31,7 +31,7 @@
               style="flex: 1"
             />
             <button class="btn btn-primary" style="border-radius: 20px">
-              Yangi reja qo'shish
+              Add +
             </button>
           </div>
         </form>
@@ -48,13 +48,13 @@
               data-id="<%=item._id%>"
               class="edit-me btn btn-secondary btn-sm mr-1"
             >
-              O'zgartirish
+              Edit
             </button>
             <button
               data-id="<%=item._id%>"
               class="delete-me btn btn-danger btn-sm"
             >
-              O'chirish
+              Delete
             </button>
           </div>
         </li>
@@ -62,10 +62,11 @@
       </ul>
 
       <button id="clean-all" class="btn btn-danger" style="border-radius: 20px">
-        Hammasini o'chirish
+        All Delete
       </button>
     </div>
 
+    <!--  === axios js => ==== -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/browser.js"></script>
   </body>
