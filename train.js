@@ -1,15 +1,35 @@
+//             ========================== J-Task =======================
+/* 
+📌  J-Task: shunday function tuzing, uning parametri integer bolib, agar argument musbat bolsa 1, 
+manfiy bolsa -1, nolga teng bolsa 0 soni return qilsin. */
+
+function getNumber(num) {
+  if (num > 0) return 1;
+  else if (num < 0) return -1;
+  else return 0;
+}
+console.log(getNumber(0)); // 0
+console.log(getNumber(99)); // 1
+console.log(getNumber(-99)); // -1
+/* 
+
+
+
+
+
+*/
 //             ========================== I-Task =======================
 /*      Shunday function tuzing, u integerlardan iborat arrayni argument sifatida qabul qilib,  
       faqat positive yani noldan yuqori qiymatlarni arrayda return qilsin
 
     📌  Masalan: getPositive([0, -15, 5, -3, 2, -8, 9, -11]) return qilishi kerak [5, 2, 9] */
 
-function getPositive(numbers) {
+/* function getPositive(numbers) {
   return numbers.filter(function (number) {
     return number > 0;
   });
 }
-console.log(getPositive([0, -15, 5, -3, 2, -8, 9, -11]));  //[5, 2, 9]
+console.log(getPositive([0, -15, 5, -3, 2, -8, 9, -11]));  //[5, 2, 9] */
 /* 
 
 
