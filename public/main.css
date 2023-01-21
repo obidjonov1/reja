@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+  height: 100vh;
+  background-image: url("./author/images/snow.jpeg");
+  background-size: cover;
+}
+
 p {
   margin-bottom: 0 !important;
 }
@@ -434,4 +441,36 @@ p {
   padding-bottom: 43px;
   width: 22px;
   opacity: 0.6;
+}
+/* ======= reja CSS style ========= */
+.list-group-item {
+  background-color: #eefcff;
+  color: #000;
+  border: 1.6px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item span {
+  text-transform: capitalize;
+}
+
+/* ======= snow CSS style ========= */
+.header {
+  height: 100%;
+}
+
+.title {
+  color: #fff;
+}
+
+.fa-snowflake {
+  position: absolute;
+  top: -20px;
+  color: #fff;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
 }

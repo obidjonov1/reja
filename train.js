@@ -3,14 +3,14 @@
 📌  J-Task: shunday function tuzing, uning parametri integer bolib, agar argument musbat bolsa 1, 
 manfiy bolsa -1, nolga teng bolsa 0 soni return qilsin. */
 
-function getNumber(num) {
+/* function getNumber(num) {
   if (num > 0) return 1;
   else if (num < 0) return -1;
   else return 0;
 }
 console.log(getNumber(0)); // 0
 console.log(getNumber(99)); // 1
-console.log(getNumber(-99)); // -1
+console.log(getNumber(-99)); // -1 */
 /* 
 
 

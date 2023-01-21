@@ -4,70 +4,96 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reja peoject</title>
+    <title>Plans peoject</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/main.css" />
   </head>
-  <body style="background-color: #b8bbd1">
+  <body style="background-color: #b8bbd1" background="images/snow.jpeg">
+    <!-- snow section -->
     <div class="container">
-      <h1 class="display-4 text-center py-1" style="margin: 50px 0 15px 0">
-        Reja va Maqsadlar
-      </h1>
+      <header class="header">
+        <i class="fas fa-snowflake"></i>
+      </header>
+      <!-- snow section end -->
 
-      <div class="jumbotron p-3 shadow-sm">
-        <form action="/create-item" id="create-form" method="POST">
-          <div class="d-flex align-items-center">
-            <input
-              id="create-field"
-              name="reja"
-              autofocus
-              autocomplete="off"
-              class="form-control mr-3"
-              type="text"
-              style="flex: 1"
-            />
-            <button class="btn btn-primary" style="border-radius: 20px">
-              Add +
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <ul id="item-list" class="list-group pb-5">
-        <% items.map(function(item){ %>
-        <li
-          class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
+      <div class="container">
+        <h1
+          class="display-4 text-center py-1 title"
+          style="margin: 50px 0 15px 0"
         >
-          <span class="item-text"><%= item.reja%></span>
-          <div>
-            <button
-              data-id="<%=item._id%>"
-              class="edit-me btn btn-secondary btn-sm mr-1"
-            >
-              Edit
-            </button>
-            <button
-              data-id="<%=item._id%>"
-              class="delete-me btn btn-danger btn-sm"
-            >
-              Delete
-            </button>
-          </div>
-        </li>
-        <% }) %>
-      </ul>
+          Enter your plans
+        </h1>
 
-      <button id="clean-all" class="btn btn-danger" style="border-radius: 20px">
-        All Delete
-      </button>
+        <div class="jumbotron p-3 shadow-sm">
+          <form action="/create-item" id="create-form" method="POST">
+            <div class="d-flex align-items-center">
+              <input
+                style="text-transform: capitalize"
+                id="create-field"
+                name="reja"
+                autofocus
+                autocomplete="off"
+                class="form-control mr-3"
+                type="text"
+                style="flex: 1"
+                placeholder="..."
+                maxlength="100"
+              />
+              <button class="btn btn-primary" style="border-radius: 20px">
+                Add +
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <ul id="item-list" class="list-group pb-5">
+          <% items.map(function(item){ %>
+          <li
+            class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
+          >
+            <span class="item-text"><%= item.reja%></span>
+            <div>
+              <button
+                data-id="<%=item._id%>"
+                class="edit-me btn btn-secondary btn-sm mr-1"
+              >
+                Edit
+              </button>
+              <button
+                data-id="<%=item._id%>"
+                class="delete-me btn btn-danger btn-sm"
+              >
+                Delete
+              </button>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+
+        <button
+          id="clean-all"
+          class="btn btn-danger"
+          style="border-radius: 20px"
+        >
+          All Delete
+        </button>
+      </div>
     </div>
 
     <!--  === axios js => ==== -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/browser.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>

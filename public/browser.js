@@ -30,7 +30,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     .then((respose) => {
       document
         .getElementById("item-list")
-        .insertAdjacentHTML("beforeend", itemTemplete(respose.data));
+        .insertAdjacentHTML("afterbegin", itemTemplete(respose.data));
       createField.value = "";
       createField.focus();
     })
@@ -42,7 +42,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 document.addEventListener("click", function (e) {
   // Delete operation
   if (e.target.classList.contains("delete-me")) {
-    if (confirm("Aniq o'chirmoqchimsiz ?")) {
+    if (confirm("Are you sure you want to delete it?")) {
       axios
         .post("/delete-item", { id: e.target.getAttribute("data-id") })
         .then((respose) => {
@@ -58,7 +58,7 @@ document.addEventListener("click", function (e) {
   // Edit operation
   if (e.target.classList.contains("edit-me")) {
     let userInput = prompt(
-      "O'zgartirish kiriting",
+      "Make a change",
       e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
     );
     if (userInput) {
